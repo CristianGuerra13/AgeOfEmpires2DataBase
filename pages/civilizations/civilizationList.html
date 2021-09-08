@@ -1,0 +1,44 @@
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../styles/ageOfEmpiresDataBaseList.min.css">
+    <head>
+        <link rel='icon' href='../../favicon.webp' type='image/webp'/>
+        <title>Age of Empires 2 Data Base</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="aoedb-header">
+            <div class="aoedb-header-hamList">
+                <button id="aoedb-hamButton" class="hamburger hamburger--3dx" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div id="aoedb-hamButton-list-container">
+                    <ul>
+                        <li onclick="window.location.replace('civilizationList.html')">Civilizations</li>
+                        <li onclick="window.location.replace('../structures/structuresList.html')">Structures</li>
+                        <li onclick="window.location.replace('../technologies/technologiesList.html')">Technlogies</li>
+                        <li onclick="window.location.replace('../units/unitsList.html')">Units</li>
+                      </ul>  
+                </div>
+            </div>
+            <div>
+                <h1 onclick="window.location.replace('../../index.html')">Age of Empires 2 Data Base</h1>
+            </div>
+            <div>
+                <form id="aoedb-search-civilization-form" class="aoedb-searchForm">
+                    <input id="aoedb-search-civilization-input" class="aoedb-searchBar" type="text" placeholder="Search a Civilization..."/>
+                    <button class="aoedb-searchButton" type="submit" name="search-submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </section>
+        <section id="aoedb-body">
+        </section>
+        <div id="aoedb-button-float"><button onclick="scrolTop()">Back to top</button></div>
+    </body> 
+    <script defer src="../../js/civilizations/aoeDBCivilizationList.min.js"></script>
+    <script defer src="../../js/ageOfEmpiresDataBase.min.js"></script>
+    <script src="https://kit.fontawesome.com/36a8e7cff8.js" crossorigin="anonymous"></script>
+</html>

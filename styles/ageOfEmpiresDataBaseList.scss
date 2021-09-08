@@ -1,0 +1,93 @@
+@import "ageOfEmpiresDataBase.scss";
+
+#aoedb-body {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, 340px);
+  justify-content: center;
+}
+
+.aoedb-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 320px;
+  height: 450px;
+  border: 5px solid #7c4f32;
+  padding: 7px;
+  margin-bottom: 30px;
+  background-color: #ece2c6;
+  box-shadow: 5px 5px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  /*&:hover {
+      width: 410px;
+      height: 460px;
+    }*/
+}
+
+.aoedb-box-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  color: #402c0d;
+  border-bottom: 1px solid $aoedb-border;
+}
+
+.aoedb-box-body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 360px;
+}
+
+.aoedb-box-body {
+  span {
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+ul {
+  padding-left: 25px;
+  p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-left: 0px !important;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  section {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  
+  #aoedb-body {
+    grid-template-columns: auto;
+  }
+
+  .aoedb-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .aoedb-box-header {
+    margin-bottom: 25px;
+  }
+
+  .aoedb-box {
+    height: fit-content;
+  }
+
+  .aoedb-box-body {
+    height: fit-content;
+  }
+}

@@ -1,0 +1,247 @@
+@import "hamburgers.scss";
+
+@font-face {
+  font-family: "Trajan Pro 3";
+  src: url("fonts/7330cea698bc9dfd4bd024a38ea56a9a.ttf") format("truetype");
+  font-display: swap;
+}
+
+$aoedb-bg: #ece2c6;
+$aoedb-border: #7c4f32;
+$aoedb-header-text-color: #cab163;
+
+body {
+  background-color: $aoedb-bg;
+  background-image: url("img/background.webp");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Trajan Pro 3";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#aoedb-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0px 10px 20px 0px;
+  margin-bottom: 50px;
+  background-image: url("img/header-background.webp");
+  h1 {
+    color: $aoedb-header-text-color;
+    cursor: pointer;
+  }
+}
+
+section {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.aoedb-searchBar {
+  width: 300px;
+  height: 35px;
+  font-size: 15px;
+  border: 2px solid $aoedb-border;
+  border-right: 0px;
+  background-color: #fff;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.aoedb-searchForm {
+  display: flex;
+  flex-flow: row;
+}
+
+.aoedb-searchButton {
+  height: 35px;
+  width: 30px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid $aoedb-border;
+  border-left: 0px;
+  background-color: #fff;
+  transition: 0.5s;
+  color: $aoedb-header-text-color;
+  &:hover {
+    color: #caa035;
+  }
+}
+
+#aoedb-hamButton-list-container {
+  display: flex;
+  flex-flow: column;
+  //background-color: #191209;
+  color: #fff;
+  position: absolute;
+  left: 70px;
+  height: 0;
+  width: 0;
+  z-index: 99;
+  overflow: hidden;
+  transition: height 0.5s, padding 0.5s, visibility 0.5s, opacity 0.5s ease-out;
+  ul {
+    display: flex;
+    flex-flow: column;
+    height: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    padding-left: 0px;
+    li {
+      //border-bottom: 2px solid #59452A;
+      padding-left: 10px;
+      height: 63px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0px;
+      background-image: url("img/list-background.webp");
+      background-size: 1140px;
+    }
+    /* li:last-child {
+    }*/
+  }
+  border: 0px solid #5a462b;
+}
+
+.aoedb-header-hamList {
+  display: flex;
+}
+
+#aoedb-button-float {
+  display: flex;
+  flex-flow: row;
+  position: fixed;
+  z-index: 99;
+  right: 40px;
+  top: 840px;
+  transition: 0.5s all;
+  button {
+    background-color: #630000;
+    color: #fff;
+    border: 2px solid #ae9e50;
+    width: 125px;
+    height: 60px;
+    transition: 0.5s all;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      background-color: #a2000f;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  section {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .aoedb-searchBar {
+    height: 50px;
+  }
+
+  .aoedb-searchButton {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 930px) {
+  .aoedb-searchBar {
+    width: 260px;
+  }
+}
+
+@media (max-width: 890px) {
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .aoedb-searchBar {
+    width: 210px;
+  }
+}
+
+@media (max-width: 730px) {
+  #aoedb-header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  #aoedb-header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 690px) {
+  #aoedb-header h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 655px) {
+  #aoedb-header h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 415px) {
+  #aoedb-header {
+    height: 153px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    h1 {
+      font-size: 18px;
+    }
+  }
+  div:last-child {
+    width: 100%;
+  }
+  .aoedb-searchForm {
+    width: 100%;
+  }
+  .aoedb-searchBar {
+    width: 100%;
+  }
+
+  #aoedb-search-body {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  #aoedb-header h1 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 320px) {
+  #aoedb-header {
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  #aoedb-header h1 {
+    font-size: 12px;
+  }
+}
