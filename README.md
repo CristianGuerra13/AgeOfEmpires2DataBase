@@ -12,7 +12,7 @@ Requisitos para visualizar la página:
 1. Node.js (Versión LTS) - https://nodejs.org/es/ 
 2. Sass - npm install -g sass 
 3. Moesif Origin & CORS Changer -https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc 
-4. Git, ya sea mediante comandos o alguna aplicación como GitHub Desktop - 
+4. Git, ya sea mediante comandos o alguna aplicación como GitHub Desktop - https://desktop.github.com/
 
 Pasos para la instalación y ejecución de la página: 
 
